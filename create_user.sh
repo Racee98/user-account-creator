@@ -50,9 +50,9 @@ fi
 if [[ -n "$GROUP" ]]; then
   if getent group "$GROUP" &>/dev/null; then
     usermod -aG "$GROUP" "$USERNAME"
-    echo "✅ Added '$USERNAME' to group '$GROUP'"
+    echo " Added '$USERNAME' to group '$GROUP'"
   else
-    echo "⚠️  Group '$GROUP' does not exist. Skipping."
+    echo " Group '$GROUP' does not exist. Skipping."
   fi
 fi
 
@@ -63,9 +63,9 @@ passwd "$USERNAME"
 chage -d 0 "$USERNAME"
 
 # Confirm success
-echo "✅ User '$USERNAME' created successfully!"
+echo " User '$USERNAME' created successfully!"
 echo "Home directory: /home/$USERNAME"
 echo "Password will need to be changed at first login."
 echo "$(date '+%Y-%m-%d %H:%M:%S') | USER CREATED | $USERNAME | by ${SUDO_USER:-root}" >> "$LOGFILE"
-echo "📋 Logged to $LOGFILE"
+echo " Logged to $LOGFILE"
 

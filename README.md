@@ -36,11 +36,11 @@ Enter full name (optional): John Doe
 Enter group to assign (leave blank to skip): developers
 New password: ••••••••
 Retype new password: ••••••••
-✅ Added 'jdoe' to group 'developers'
-✅ User 'jdoe' created successfully!
+Added 'jdoe' to group 'developers'
+User 'jdoe' created successfully!
 Home directory: /home/jdoe
 Password will need to be changed at first login.
-📋 Logged to /var/log/user-audit.log
+Logged to /var/log/user-audit.log
 ```
 
 ---
